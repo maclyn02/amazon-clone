@@ -1,0 +1,25 @@
+.header {
+    background-color: #131921;
+    color: white;
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    height: 40px;
+    display: flex;
+    position: static;
+    margin-left: 30px;
+    padding: 6px;
+}
+
+.logo:hover {
+    cursor: pointer;
+    outline: 2px solid white;
+}

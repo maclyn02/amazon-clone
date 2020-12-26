@@ -4,20 +4,21 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+import Header from './Header';
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Switch>
-          <Route path=''>
-            <h2>MAIN</h2>
-          </Route>
           <Route path='/checkout'>
             <h2>CHECKOUT</h2>
           </Route>
           <Route path='/login'>
             <h2>Login</h2>
+          </Route>
+          <Route path=''>
+            <Header />
           </Route>
         </Switch>
       </div>
