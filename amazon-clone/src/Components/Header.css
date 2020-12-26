@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header__logo {
@@ -24,7 +27,7 @@
 
 .header__searchForm {
     display: flex;
-    width: 60vw;
+    min-width: 60vw;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -66,8 +69,6 @@
 
 .header__rightNav {
     display: flex;
-    justify-content: flex-end;
-    width: 30vw;
     height: 40px;
     margin-right: 20px;
 }
@@ -75,7 +76,7 @@
 .header__link{
     text-decoration: none;
     color: white;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
     padding-top: 5px;
 }
 
@@ -87,6 +88,8 @@
 .header__option {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    width: 60px;
 }
 .header__basketOption {
     display: flex;
@@ -94,11 +97,11 @@
 }
 
 .header__optionLine1 {
-    font-size: 12px;    
+    font-size: 10px;    
 }
 
 .header__optionLine2 {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .header__basketCount {
