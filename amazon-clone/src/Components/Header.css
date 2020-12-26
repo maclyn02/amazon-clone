@@ -7,19 +7,60 @@
     align-items: center;
 }
 
-.logo {
+.header__logo {
     font-size: 40px;
     font-weight: 900;
     text-decoration: none;
     color: white;
-    height: 40px;
-    display: flex;
-    position: static;
     margin-left: 30px;
-    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.logo:hover {
+.header__logo:hover {
     cursor: pointer;
     outline: 2px solid white;
+    border-radius: 5px;
+}
+
+.header__searchForm {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 30px;
+    width: 100%;
+}
+
+.header__searchButton {
+    background-color: rgb(243, 188, 6);
+    width: 50px;   
+    height: 40px; 
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.header__searchButton:hover {
+    background-color: rgb(240, 161, 15);
+}
+
+.header__searchSelect {
+    height: 40px;
+    background-color: rgb(233, 233, 233);
+    color: rgb(117, 117, 117);
+    outline: 0;
+    padding: 5px;
+    width: 50px;   
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+}
+
+.header__searchSelect:hover {
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+.header__searchInput {
+    width: 100%;
+    border: 0;
 }
