@@ -5,9 +5,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .header__logo {
@@ -70,30 +67,31 @@
 .header__rightNav {
     display: flex;
     height: 40px;
-    margin-right: 20px;
 }
 
 .header__link{
     text-decoration: none;
     color: white;
-    padding: 0px 10px 0px 10px;
-    padding-top: 5px;
 }
 
-.header__link:hover {
+.header__option {
+    padding: 5px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 40px;
+}
+.header__option:hover, .header__basketOption:hover {
     cursor: pointer;
     outline: 1px solid white;
 }
 
-.header__option {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 60px;
-}
 .header__basketOption {
     display: flex;
-    padding-top: 5px;
+    margin: 0px 20px 0px 10px;
+    height: 40px;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
 }
 
 .header__optionLine1 {
@@ -102,6 +100,7 @@
 
 .header__optionLine2 {
     font-size: 13px;
+    white-space: nowrap;
 }
 
 .header__basketCount {

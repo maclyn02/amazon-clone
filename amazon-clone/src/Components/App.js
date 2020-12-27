@@ -31,14 +31,5 @@ function App() {
     </Router>
   );
 }
-{
-  // localhost
-}
-{
-  // localhost/login
-}
-{
-  // localhost/checkout
-}
 
 export default App;

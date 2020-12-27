@@ -4,5 +4,7 @@
 
 .app{
     width: 100%;
+    object-fit: contain;
     background-color: rgb(235, 235, 235);
+    overflow-x: hidden;
 }
