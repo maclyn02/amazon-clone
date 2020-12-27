@@ -1,0 +1,22 @@
+.footer {
+    display: block;
+    height: 400px;
+    background-color: #131921;
+    margin-top: 100px;
+
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    font-size: 15px;
+    padding: 50px;
+}
+
+.footer__links>div {
+    padding: 20px;
+    cursor: pointer;
+    max-width: 20vw;
+}
