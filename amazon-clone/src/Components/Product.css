@@ -1,0 +1,43 @@
+.product {
+    padding: 5px;
+    display: block;
+    background-color: white;
+    margin: 10px;
+    z-index: 50;
+    min-width: 300px;
+}
+
+.product>div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product img {
+    object-fit: contain;
+    height: 150px;
+    object-fit: contain;
+    background-color: white;
+    z-index: 50;
+}
+
+.product button {
+    background-color: rgb(235, 175, 47);
+    border-radius: 5px;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.product button:hover{
+    background-color: rgb(214, 141, 45);
+    cursor: pointer;
+}
+
+.product__title {
+    font-size: 20px;
+}
+.product__price>strong {
+    margin: 5px;
+}
