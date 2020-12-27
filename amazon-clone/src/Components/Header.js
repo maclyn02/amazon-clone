@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search';
@@ -7,7 +7,11 @@ import { useStateValue } from '../StateProvider';
 
 function Header() {
 
-    const [{ basket, dispatch }] = useStateValue();
+    const [{ basket }] = useStateValue()
+    const [department, setDepartment] = useState('All')
+
+    console.log(department)
+    console.log(basket)
 
     return (
         <div className='header'>
@@ -19,7 +23,7 @@ function Header() {
 
             {/* Search */}
             <div className='header__searchForm'>
-                <select value='All' className='header__searchSelect'>
+                <select value='All' className='header__searchSelect' onChange={event => setDepartment(event.target.value)}>
                     <option value='All'>All</option>
                     <option value='Electronics'>Electronics</option>
                     <option value='Home'>Home</option>
