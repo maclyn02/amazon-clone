@@ -8,10 +8,8 @@ import { useStateValue } from '../StateProvider';
 function Header() {
 
     const [{ basket }] = useStateValue()
-    const [department, setDepartment] = useState('All')
-
-    console.log(department)
-    console.log(basket)
+    const [, setDepartment] = useState('All')
+    const [searchActive, setSearchActive] = useState(false)
 
     return (
         <div className='header'>
@@ -22,14 +20,14 @@ function Header() {
             </Link>
 
             {/* Search */}
-            <div className='header__searchForm'>
+            <div className={`header__searchForm ${searchActive ? 'header__searchActive' : ''}`}>
                 <select value='All' className='header__searchSelect' onChange={event => setDepartment(event.target.value)}>
                     <option value='All'>All</option>
                     <option value='Electronics'>Electronics</option>
                     <option value='Home'>Home</option>
                     <option value='Clothing'>Clothing</option>
                 </select>
-                <input type='text' className='header__searchInput' />
+                <input type='text' className='header__searchInput' onFocus={event => setSearchActive(true)} onBlur={event => setSearchActive(false)}/>
                 <button className='header__searchButton'><SearchIcon /></button>
             </div>
 
