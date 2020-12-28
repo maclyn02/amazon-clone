@@ -4,15 +4,21 @@ import './Header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useStateValue } from '../StateProvider';
+import { auth } from '../firebase';
 
 function Header() {
 
-    const [{ basket }] = useStateValue()
+    const [{ basket, user }] = useStateValue()
     const [, setDepartment] = useState('All')
     const [searchActive, setSearchActive] = useState(false)
 
+    const login = () => {
+        if (user)
+            auth.signOut()
+    }
+
     return (
-        <div className='header'>
+        <nav className='header'>
 
             {/* Logo */}
             <Link to='/' className='header__logo'>
@@ -27,16 +33,16 @@ function Header() {
                     <option value='Home'>Home</option>
                     <option value='Clothing'>Clothing</option>
                 </select>
-                <input type='text' className='header__searchInput' onFocus={event => setSearchActive(true)} onBlur={event => setSearchActive(false)}/>
+                <input type='text' className='header__searchInput' onFocus={event => setSearchActive(true)} onBlur={event => setSearchActive(false)} />
                 <button className='header__searchButton'><SearchIcon /></button>
             </div>
 
             {/* Nav Links */}
             <div className="header__rightNav">
-                <Link to='/login' className='header__link'>
-                    <div className='header__option'>
-                        <span className='header__optionLine1'>Hello</span>
-                        <span className='header__optionLine2'>Sign In</span>
+                <Link to={user ? '/' : '/login'} className='header__link'>
+                    <div className='header__option' onClick={login}>
+                        <span className='header__optionLine1'>Hello {user?.email.split('@')[0]}</span>
+                        <span className='header__optionLine2'>{user ? 'Sign-Out' : 'Sign-In'}</span>
                     </div>
                 </Link>
                 <Link to='/' className='header__link'>
@@ -55,7 +61,7 @@ function Header() {
                     </div>
                 </Link>
             </div>
-        </div>
+        </nav>
     )
 }
 
