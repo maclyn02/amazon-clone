@@ -1,5 +1,6 @@
 export const initialState = {
-    basket: []
+    basket: [],
+    user: null
 }
 
 export const getBasketTotal = (basket) => (
@@ -23,10 +24,14 @@ function reducer(state, action) {
             else
                 updatedBasket.splice(index, 1)
 
-            console.log(updatedBasket)
             return {
                 ...state,
                 basket: updatedBasket
+            }
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
             }
         default:
             return state
