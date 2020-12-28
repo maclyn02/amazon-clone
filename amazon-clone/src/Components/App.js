@@ -8,6 +8,7 @@ import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
 import Checkout from './Checkout';
+import Login from './Login';
 
 function App() {
   return (
@@ -20,9 +21,7 @@ function App() {
             <Footer />
           </Route>
           <Route path='/login'>
-            <Header />
-            <h2>Login</h2>
-            <Footer />
+            <Login />
           </Route>
           <Route path=''>
             <Header />
