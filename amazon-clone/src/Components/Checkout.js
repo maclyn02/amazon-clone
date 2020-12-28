@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import { useStateValue } from '../StateProvider'
 import './Checkout.css'
 import BasketItem from './BasketItem'
 import { Link } from 'react-router-dom'
+import { getBasketTotal } from '../reducer'
 
 function Checkout() {
 
     const [{ basket }] = useStateValue()
-    const [subTotal, setSubTotal] = useState(0)
+    // following code is replaced by a reducer function
+    // const [subTotal, setSubTotal] = useState(0)
 
-    useEffect(() => {
-        let total = 0
-        basket.forEach(product => {
-            total += product.price
-        })
-        setSubTotal(total)
+    // useEffect(() => {
+    //     let total = 0
+    //     basket.forEach(product => {
+    //         total += product.price
+    //     })
+    //     setSubTotal(total)
 
-    }, [basket])
+    // }, [basket])
 
     return (
         <div>
@@ -52,8 +54,7 @@ function Checkout() {
                         <div className='checkout__subtotalContainer'>
                             <div className="checkout__subtotalPanel">
                                 <div>
-                                    <span>Basket Subtotal: £{subTotal}</span>
-                                    <span>{`Item(s): ${basket.length}`}</span>
+                                    <span>{`Subtotal (${basket.length} ${basket.length === 1 ? 'item' : 'items'}): £${getBasketTotal(basket)}`}</span>
                                 </div>
                                 <button className='checkout__button'>Proceed to checkout</button>
                             </div>
