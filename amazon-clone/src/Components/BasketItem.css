@@ -1,0 +1,81 @@
+.basketItem {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.basketItem__image img {
+    object-fit: contain;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+}
+
+.basketItem__detailsPane {
+    width: 60%;
+}
+
+.basketItem__detailsPane div {
+    padding: 10px;
+}
+
+.basketItem__pricePane {
+    justify-content: flex-end;
+    display: flex;
+    width: 10%;
+    padding: 10px;
+}
+.basketItem__pricePane>div {
+    border-left: 1px solid rgb(235 232 232);
+    padding: 5px; 
+}
+
+.basketItem__title {
+    font-size: 20px;
+}
+
+.basketItem__price>strong {
+    margin: 5px;
+}
+
+.basketItem__stockAvailable {
+    color: green;
+}
+
+.basketItem__buttonPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basketItem__buttonPanel button {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    color: grey;
+}
+
+.basketItem__buttonPanel button:hover {
+    border: 0;
+    color: black;
+}
+
+.basketItem__quantityPanel {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.basketItem__quantityPanel * {
+    padding: 10px;
+    height: 20px;
+    border: 1px solid rgb(119, 118, 118);
+}
+ 
+.basketItem__quantityPanel input {
+    width: 50px;
+}
