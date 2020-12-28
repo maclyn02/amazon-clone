@@ -39,16 +39,16 @@ function BasketItem({ id, title, price, rating, image }) {
                 <div className="basketItem__buttonPanel">
                     <div className="basketItem__quantityPanel">
                         <span>Qty</span>
-                        <input type='number' value={qty} onChange={event => setQty(event.target.value)}/>
+                        <input type='number' value={qty} onChange={event => setQty(event.target.value)} />
                     </div>
-                    <button onClick={event => removeFromBasket}>
+                    <button onClick={removeFromBasket}>
                         <DeleteForeverIcon />
                     </button>
                 </div>
             </div>
             <div className='basketItem__pricePane'>
                 <div className="basketItem__price">
-                    £<strong>{price*qty}</strong>
+                    £<strong>{price * qty}</strong>
                 </div>
             </div>
         </div>
