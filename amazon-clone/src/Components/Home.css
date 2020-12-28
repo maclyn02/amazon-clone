@@ -9,7 +9,7 @@
 }
 
 .home__productPanel {
-    width: 95%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

@@ -4,6 +4,8 @@
     background-color: white;
     margin: 10px;
     min-width: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .product>div {
