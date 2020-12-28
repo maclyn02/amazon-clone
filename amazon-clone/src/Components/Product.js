@@ -4,7 +4,7 @@ import './Product.css'
 
 function Product({ id, title, price, rating, image }) {
 
-    const [,dispatch] = useStateValue()
+    const [, dispatch] = useStateValue()
 
 
     const addToBasket = () => {
@@ -23,9 +23,6 @@ function Product({ id, title, price, rating, image }) {
     return (
         <div className='product'>
             <div>
-                <div className="product__id">
-                    {id}
-                </div>
                 <div className="product__title">
                     {title}
                 </div>
@@ -49,7 +46,7 @@ function Product({ id, title, price, rating, image }) {
                 <button
                     className="product__addToBasketButton"
                     onClick={addToBasket}
-                >
+                    >
                     Add to Basket
                 </button>
             </div>

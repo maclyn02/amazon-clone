@@ -3,7 +3,6 @@
     display: block;
     background-color: white;
     margin: 10px;
-    z-index: 50;
     min-width: 300px;
 }
 
@@ -17,9 +16,7 @@
 .product img {
     object-fit: contain;
     height: 150px;
-    object-fit: contain;
     background-color: white;
-    z-index: 50;
 }
 
 .product button {

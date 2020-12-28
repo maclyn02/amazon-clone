@@ -7,6 +7,7 @@ import {
 import Header from './Header';
 import Home from './Home';
 import Footer from './Footer';
+import Checkout from './Checkout';
 
 function App() {
   return (
@@ -15,11 +16,13 @@ function App() {
         <Switch>
           <Route path='/checkout'>
             <Header />
-            <h2>CHECKOUT</h2>
+            <Checkout />
+            <Footer />
           </Route>
           <Route path='/login'>
             <Header />
             <h2>Login</h2>
+            <Footer />
           </Route>
           <Route path=''>
             <Header />

@@ -3,7 +3,8 @@
     height: 400px;
     background-color: #131921;
     margin-top: 100px;
-
+    bottom: 0;
+    width: 100%;
 }
 
 .footer__links {
@@ -18,5 +19,5 @@
 .footer__links>div {
     padding: 20px;
     cursor: pointer;
-    max-width: 20vwgit ;
+    max-width: 20vw;
 }
